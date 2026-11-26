@@ -1,0 +1,121 @@
+@use "../../helpers/index" as *;
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  box-shadow: 0 0 10px #e1dceb;
+
+  .container {
+    max-width: 1200px;
+    .logo {
+      object-fit: cover;
+      height: 4rem;
+      width: 4rem;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .nav-item {
+      position: relative;
+      @media #{$minMedium} {
+        &.active::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: $main-primary-btn;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+      &.active,
+      &:hover {
+        background: $main-primary-btn;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .nav-link {
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+    .theme-toggle-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    .navMenu {
+      position: fixed;
+      top: 4rem;
+      right: 1.5rem;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+      min-width: 50%;
+      background: #1a0e32;
+      border-radius: 8px;
+      .nav-item {
+        text-align: center;
+        padding: 20px 0;
+        .nav-link-menu {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+    .btns-menu {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+      @media #{$minMedium} {
+        display: none;
+      }
+      .menu-btn {
+        border: none;
+      }
+    }
+    .navbar-actions {
+      .social-btn {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        padding: 8px 12px;
+        border-radius: 8px;
+        color: #1e293b;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.2s;
+        &:hover {
+          background: #F8F7FA;
+          border-color: #c4b6e1;
+          color: #5B3E96;
+        }
+      }
+      .btn {
+        padding: 8px 12px;
+        font-weight: 600;
+        border-radius: 10px;
+        font-size: 0.95rem;
+        background: $main-secondary-btn;
+        color: $white-color;
+        transition: all 0.3s ease;
+        &:hover {
+          transform: translateY(-2px);
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

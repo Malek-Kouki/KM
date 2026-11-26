@@ -1,0 +1,30 @@
+.scroll-top-fixed-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; // Rond (ou 8px si tu préfères carré)
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #4f46e5;
+    border-color: #4f46e5;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
+  }
+
+  i {
+    font-size: 0.9rem;
+  }
+}

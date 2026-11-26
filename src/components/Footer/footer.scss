@@ -1,0 +1,46 @@
+@use "../../helpers/index" as *;
+
+.footer {
+  background: $main-secondary-btn;
+  position: relative;
+
+  .container {
+    .footer-text {
+      font-size: 0.85rem;
+      color: $light-background-color;
+      text-align: center;
+      margin: auto;
+    }
+
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 1000; 
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #4f46e5;
+        border-color: #4f46e5;
+        color: #ffffff;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
+      }
+
+      i {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@use "../../helpers/index" as *;
+
+.container {
+  .portfolio {
+    padding: 40px 0;
+    .bloc-desc {
+      h2 {
+        margin-bottom: 10px;
+      }
+      p{
+        margin: 10px auto 10px auto;
+        max-width: 750px;
+        text-align: center;
+      }
+    }
+    .filter-btn {
+      background-color: $main-secondary-btn;
+      border: 1px solid $main-secondary-btn;
+      color: $white-color;
+      padding: 8px 18px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+      &:hover {
+        transform: translateY(-2px);
+        opacity: 0.8;
+      }
+
+      &.active {
+        opacity: 0.7;
+      }
+    }
+    .card-custom {
+      border: 1px solid #d9dcdf;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px #c4c2e3;
+        .card-img-top {
+          transform: scale(1.09);
+        }
+        .title-hover {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .card-img-top {
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+      .title-hover {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.75);
+        color: white;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 0.3s;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .project-badge {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        background: rgb(133, 13, 213);
+        color: white;
+        font-size: 0.75rem;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-weight: 600;
+        backdrop-filter: blur(4px);
+      }
+      .badge-custom {
+        background-color: #e9eaeb;
+        color: #475569;
+        font-weight: 500;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 0.7rem;
+        border: 1px solid #d9dcdf;
+      }
+      .small-link {
+        font-size: 0.85rem;
+        transition: color 0.2s;
+        &:hover {
+          color: #3730a3 !important;
+          text-decoration: underline !important;
+        }
+      }
+      .text-demo {
+        font-size: 0.85rem;
+        color: $text-h2;
+        &:hover {
+          opacity: 0.5;
+          text-decoration: none!important;
+        }
+      }
+      .github-icon {
+        font-size: 1.1rem;
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    @media #{$minMedium} {
+      padding: 80px 0;
+    }
+  }
+}
