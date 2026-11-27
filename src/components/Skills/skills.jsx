@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./skills.scss";
 import Title_Data from "../../data/titleData";
+import testNgLogo from "../../assets/TestNg.png"
 
 const Skills = () => {
     const skillCategories = [
@@ -54,7 +55,7 @@ const Skills = () => {
                 },
                 { 
                     name: "TestNG", 
-                    logo: "./src/assets/TestNg.png" 
+                    logo: "testNgLogo" 
                 },
                 { 
                     name: "Cucumber (BDD)", 
